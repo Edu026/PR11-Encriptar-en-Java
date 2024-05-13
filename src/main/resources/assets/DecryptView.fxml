@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cat.iesesteveterradas.ControllerDecryptView">
    <children>
-      <Button layoutX="216.0" layoutY="311.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="169.0" text="Desencriptar" />
-      <Text layoutX="163.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Clau privada" textAlignment="RIGHT" wrappingWidth="105.13671875" />
-      <Text layoutX="163.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arxiu:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
-      <Text layoutX="163.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desti:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
+      <Button layoutX="216.0" layoutY="277.0" mnemonicParsing="false" onAction="#decryptFile" prefHeight="30.0" prefWidth="169.0" text="Desencriptar" />
+      <Text layoutX="163.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arxiu:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
+      <Text layoutX="163.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clau privada:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
+      <Text layoutX="163.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
       <Text layoutX="54.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Desencriptar arxiu" wrappingWidth="179.13671875">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <TextField layoutX="278.0" layoutY="153.0" />
-      <TextField layoutX="278.0" layoutY="107.0" />
-      <TextField layoutX="278.0" layoutY="251.0" />
+      <TextField layoutX="278.0" layoutY="111.0" />
+      <TextField layoutX="278.0" layoutY="155.0" />
+      <TextField layoutX="278.0" layoutY="195.0" />
       <Separator layoutY="48.0" prefHeight="0.0" prefWidth="600.0" />
-      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField layoutX="278.0" layoutY="202.0" />
-      <Text layoutX="163.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" textAlignment="RIGHT" wrappingWidth="105.13671875" />
-      <Button fx:id="btn_to_MainView" layoutX="17.0" layoutY="14.0" mnemonicParsing="false" onAction="#animateToMainView" text="&lt;-" />
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="16.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="163.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destí:" textAlignment="RIGHT" wrappingWidth="105.13671875" />
+      <TextField layoutX="278.0" layoutY="235.0" />
+      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#animateToMainView" prefHeight="17.0" prefWidth="36.0" text="&lt;-" />
    </children>
 </AnchorPane>
