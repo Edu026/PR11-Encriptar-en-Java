@@ -5,7 +5,6 @@ import java.security.*;
 import java.security.spec.X509EncodedKeySpec;
 
 import javax.crypto.*;
-import javax.crypto.spec.SecretKeySpec;
 
 public class EncryptorUtils {
  

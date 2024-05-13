@@ -5,8 +5,10 @@ import java.io.*;
 public class RSAKeyGenerator {
     public static void main(String[] args) throws Exception {
         // Genera un par de claves RSA de 2048 bits
+        SecureRandom random = SecureRandom.getInstance("SHA1PRNG");
+
         KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
-        keyGen.initialize(2048);
+        keyGen.initialize(1024, random);
         KeyPair keyPair = keyGen.generateKeyPair();
 
         // Guarda la clave privada en un archivo

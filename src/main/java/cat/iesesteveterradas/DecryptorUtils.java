@@ -1,16 +1,13 @@
 package cat.iesesteveterradas;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.security.PrivateKey;
-import java.security.KeyFactory;
+import java.io.*;
+import java.security.*;
 import java.security.spec.PKCS8EncodedKeySpec;
-import javax.crypto.Cipher;
+import javax.crypto.*;
 
 public class DecryptorUtils {
 
     public static void decrypt(String privateKeyPath, String inputFile, String outputFile) {
-
         try {
             // Lee la clave privada
             FileInputStream fis = new FileInputStream(privateKeyPath);
@@ -25,7 +22,7 @@ public class DecryptorUtils {
 
             // Lee el archivo encriptado
             FileInputStream inFile = new FileInputStream(inputFile);
-            byte[] encryptedBytes = new byte[(int) inputFile.length()];
+            byte[] encryptedBytes = new byte[(int) inFile.available()];
             inFile.read(encryptedBytes);
             inFile.close();
 
@@ -34,7 +31,7 @@ public class DecryptorUtils {
 
             // Escribe el archivo desencriptado
             FileOutputStream outFile = new FileOutputStream(outputFile);
-            outFile.write(cipher.doFinal(decryptedBytes,));
+            outFile.write(decryptedBytes);
             outFile.close();
 
             System.out.println("¡Archivo desencriptado exitosamente!");
@@ -44,4 +41,3 @@ public class DecryptorUtils {
         }
     }
 }
-
